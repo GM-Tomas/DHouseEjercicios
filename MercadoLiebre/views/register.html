@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/register.css" />
+</head>
+
+<body class="body-register">
+  <!-- <h2>Registro de Usuario</h2> -->
+  <form action="index.html" method="POST">
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellido" required /><br /><br />
+    <input type="text" id="username" name="username" placeholder="Nombre de usuario" required /><br /><br />
+    <input type="text" id="email" name="email" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingrese un mail" required/><br /><br />
+
+    <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br />
+    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required /><br /><br />
+    <input id="domicilio" name="domicilio" placeholder="Domicilio" required></input><br /><br />
+
+    <label for="perfil_usuario">Perfil del usuario:</label><br />
+    <input type="radio" id="comprador" name="perfil_usuario" value="comprador" required />
+    <label for="comprador">Comprador</label><br />
+    <input type="radio" id="vendedor" name="perfil_usuario" value="vendedor" required />
+    <label for="vendedor">Vendedor</label><br /><br />
+
+    <label for="categorias_interes">Categorías de interés:</label><br />
+    <input type="checkbox" id="electro" name="categorias_interes" value="electro" />
+    <label for="electro">Electro</label><br />
+    <input type="checkbox" id="moda" name="categorias_interes" value="moda" />
+    <label for="moda">Moda</label><br />
+    <input type="checkbox" id="hogar" name="categorias_interes" value="hogar" />
+    <label for="hogar">Hogar</label><br />
+    <input type="checkbox" id="jugueteria" name="categorias_interes" value="jugueteria" />
+    <label for="jugueteria">Juguetería</label><br />
+    <input type="checkbox" id="vida_sana" name="categorias_interes" value="vida_sana" />
+    <label for="vida_sana">Vida Sana</label><br /><br />
+
+    <label for="foto_usuario">Foto de usuario:</label>
+    <input type="file" id="foto_usuario" name="foto_usuario" accept="image/*" required /><br /><br />
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required /><br /><br />
+
+    <label for="confirm_password">Confirmar Contraseña:</label>
+    <input type="password" id="confirm_password" name="confirm_password" required /><br /><br />
+
+    <input type="submit" value="Enviar" />
+    <input type="reset" value="Borrar" />
+  </form>
+</body>
+
+</html>

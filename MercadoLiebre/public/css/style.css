@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+:root {
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+  --fuente: Roboto;
+}
+
+.body-home {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuente);
+  background-color: var(--amarillo);
+  color: var(--gris-oscuro);
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+  margin-left: 5%;
+}
+
+.search input {
+  display: block;
+  width: 25%;
+  height: 2vw;
+}
+
+.search button {
+  background-color: var(--gris-claro);
+}
+
+.burger-menu {
+  width: 20%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.burger-menu button {
+  border: none;
+  border-radius: 5px;
+  color: var(--gris-claro);
+  background-color: var(--celeste);
+  height: 50%;
+  width: 15%;
+}
+
+.logo img {
+  width: 30%;
+}
+
+.precios {
+  font-size: 18px;
+}
+
+.titulares {
+  font-size: 24px;
+}
+
+.descuentos {
+  font-size: 16px;
+}
+
+.descripciones {
+  font-size: 16px;
+}
+
+p {
+  font-size: 12px;
+}
+
+a {
+  font-size: 12px;
+}
+
+span {
+  font-size: 12px;
+}
+
+#banner {
+  width: 100vw;
+}
+
+
+/*
+Footer Style
+*/
+
+footer {
+  background-color: var(--gris-claro);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerElement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+}
+
+.footerElement h3 {
+  margin-top: 1.5vw;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.footerElement p {
+  margin: 0;
+  text-align: center;
+}
+
+.footerElement i {
+  color: var(--celeste);
+  margin-top: 4vw;
+}
+
+.footer-row{
+  display: flex;
+  justify-content: flex-start;
+  width: 100vw;
+}
