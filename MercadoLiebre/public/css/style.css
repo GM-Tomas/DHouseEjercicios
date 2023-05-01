@@ -6,22 +6,48 @@
   --celeste: #1259c3;
   --gris-oscuro: #666;
   --gris-claro: #ebebeb;
+  --blanco: #fff;
   --verde: #39b54a;
   --fuente: Roboto;
+}
+
+p {
+  font-size: 12px;
+}
+
+a {
+  font-size: 12px;
+}
+
+span {
+  font-size: 12px;
 }
 
 .body-home {
   margin: 0;
   padding: 0;
+  width: 100vw;
   font-family: var(--fuente);
-  background-color: var(--amarillo);
   color: var(--gris-oscuro);
+  background-color: var(--gris-claro);
 }
 
-.cta {
+/*End of basic declaration*/
+
+/*Header*/
+
+header {
+  background-color: var(--amarillo);
+}
+
+.logo img {
+  width: 30%;
+}
+
+.cuotas {
   display: flex;
   align-items: center;
-  margin-top: 1%;
+  margin-top: 1vw;
   margin-left: 5%;
 }
 
@@ -51,12 +77,32 @@
   width: 15%;
 }
 
-.logo img {
-  width: 30%;
+/*Banner*/
+#banner {
+  width: 100vw;
+}
+
+/*Main*/
+main {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.product {
+  border-top: 1px solid var(--gris-claro);
+  background-color: var(--blanco);
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.product img {
+  width: 100%;
 }
 
 .precios {
   font-size: 18px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .titulares {
@@ -71,46 +117,29 @@
   font-size: 16px;
 }
 
-p {
-  font-size: 12px;
-}
 
-a {
-  font-size: 12px;
-}
-
-span {
-  font-size: 12px;
-}
-
-#banner {
-  width: 100vw;
-}
 
 
 /*
 Footer Style
 */
 
-footer {
-  background-color: var(--gris-claro);
-}
-
 .footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
 }
 
 .footerElement {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20vw;
+  width: 40vw;
 }
 
 .footerElement h3 {
-  margin-top: 1.5vw;
+  margin-top: 2vw;
   margin-bottom: 0;
   text-align: center;
 }
@@ -122,11 +151,24 @@ footer {
 
 .footerElement i {
   color: var(--celeste);
-  margin-top: 4vw;
+  margin-top: 5vw;
+  /*margin-bottom: 2vw;*/
 }
 
-.footer-row{
+.footer-row {
   display: flex;
   justify-content: flex-start;
   width: 100vw;
+}
+
+.footer-row p {
+  margin-left: 2vw;
+}
+
+@media screen and (min-width: 769px) {
+  /* Estilos para la navegación en desktop */
+}
+
+@media screen and (min-width: 361px) {
+  /* Estilos para la navegación en tablets */
 }
