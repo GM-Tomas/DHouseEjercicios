@@ -159,6 +159,7 @@ main {
 .titulares {
   font-size: 24px;
   margin-top: 3vw;
+  margin-bottom: 1vh;
   margin-left: 5vw;
 }
 
@@ -338,7 +339,6 @@ Hover animation
 
   .titulares {
     margin-left: 2.5vw;
-
   }
 
 }
