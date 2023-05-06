@@ -11,6 +11,12 @@
   --fuente: Roboto;
 }
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 p {
   font-size: 12px;
 }
@@ -24,8 +30,6 @@ span {
 }
 
 .body-home {
-  margin: 0;
-  padding: 0;
   width: 100vw;
   font-family: var(--fuente);
   color: var(--gris-oscuro);
@@ -38,34 +42,47 @@ span {
 
 header {
   background-color: var(--amarillo);
+  padding-top: 3vw;
+  padding-right: 4vw;
+  padding-left: 3vw;
+  padding-bottom: 4vw;
 }
 
-.logo img {
-  width: 30%;
+.main-header-top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.logo {
+  width: 45vw;
 }
 
 .cuotas {
+  margin-top: 3vw;
+  width: 100%;
   display: flex;
-  align-items: center;
-  margin-top: 1vw;
-  margin-left: 5%;
+  justify-content: center;
 }
 
-.search input {
-  display: block;
-  width: 25%;
-  height: 2vw;
+.search {
+  width: 45vw;
+  margin: auto;
 }
 
 .search button {
   background-color: var(--gris-claro);
 }
 
+.search input {
+  width: 90%;
+  height: 100%;
+}
+
 .burger-menu {
-  width: 20%;
-  height: 100px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .burger-menu button {
@@ -73,8 +90,8 @@ header {
   border-radius: 5px;
   color: var(--gris-claro);
   background-color: var(--celeste);
-  height: 50%;
-  width: 15%;
+  padding: 3% 2.5%;
+  margin-top: 5vw;
 }
 
 /*Banner*/
@@ -91,8 +108,39 @@ main {
 .product {
   border-top: 1px solid var(--gris-claro);
   background-color: var(--blanco);
-  margin-top: 10px;
   padding: 15px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  width: 20%;
+}
+
+
+.icon-container {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--verde);
+  background-color: var(--blanco);
+  border-radius: 50%;
+  right: 20px;
+  top: -15px;
+  align-self: flex-end;
+  margin-right: 3vw;
+}
+
+.fa-truck {
+  color: var(--verde);
+  transition: transform 0.3s ease;
+}
+
+.titulares {
+  font-size: 24px;
+  margin-top: 3vw;
 }
 
 .product img {
@@ -101,23 +149,32 @@ main {
 
 .precios {
   font-size: 18px;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.titulares {
-  font-size: 24px;
+  width: 30%;
 }
 
 .descuentos {
   font-size: 16px;
+  color: var(--verde);
+  width: 70%;
+  margin-left: 10%;
+}
+
+.precio-descuento {
+  display: flex;
 }
 
 .descripciones {
   font-size: 16px;
+  display: none;
 }
 
-
+#ultima-visita,
+#ofertas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
 
 
 /*
@@ -151,13 +208,11 @@ Footer Style
 
 .footerElement i {
   color: var(--celeste);
-  margin-top: 5vw;
-  /*margin-bottom: 2vw;*/
+  margin-top: 3vw;
 }
 
 .footer-row {
   display: flex;
-  justify-content: flex-start;
   width: 100vw;
 }
 
@@ -165,10 +220,86 @@ Footer Style
   margin-left: 2vw;
 }
 
-@media screen and (min-width: 769px) {
-  /* Estilos para la navegación en desktop */
+
+.product:hover {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-@media screen and (min-width: 361px) {
-  /* Estilos para la navegación en tablets */
+.product:hover .descripciones {
+  display: block;
+}
+
+.fa-truck:hover {
+  transform: rotate(-90deg);
+}
+
+.footerElement i:hover {
+  color: #000;
+}
+
+/*Media queries*/
+@media only screen and (min-width: 361px) {
+
+  .product {
+    width: 90%;
+  }
+
+  .main-nav-bar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+
+  .main-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vw;
+  }
+
+  .main-nav-bar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+    width: 32vw;
+  }
+
+  .product {
+    width: 40%;
+  }
+
+  .burger-menu button {
+    display: none;
+  }
+
+  .search {
+    width: 30vw;
+    margin: auto;
+  }
+
+  .logo {
+    width: 30vw;
+  }
+
+  .cuotas {
+    width: 30vw;
+  }
+
+}
+
+
+@media only screen and (min-width: 1279px) {
+
+  .product {
+    width: 20%;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 3vw;
+  }
+
 }
