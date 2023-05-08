@@ -15,6 +15,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: var(--fuente);
 }
 
 p {
@@ -29,9 +30,8 @@ span {
   font-size: 12px;
 }
 
-.body-home {
+body{
   width: 100vw;
-  font-family: var(--fuente);
   color: var(--gris-oscuro);
   background-color: var(--gris-claro);
 }
@@ -94,6 +94,11 @@ header {
   border-bottom-right-radius: 5px;
 }
 
+.search-bar{
+  display: flex;
+  align-items: center;
+}
+
 .burger-menu {
   display: flex;
   justify-content: center;
@@ -111,6 +116,19 @@ header {
 .main-nav-bar {
   display: none;
 }
+
+.main-nav-bar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 32vw;
+}
+
+.main-nav-bar a {
+  text-decoration: none;
+  color: var(--gris-oscuro);
+}
+
 
 /*Banner*/
 #banner {
@@ -278,14 +296,6 @@ Hover animation
     display: flex;
     justify-content: space-between;
     margin-top: 3vw;
-  }
-
-  .main-nav-bar ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    text-decoration: none;
-    width: 32vw;
   }
 
   .product {
